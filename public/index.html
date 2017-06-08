@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Reddit News Scraper</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="style.css">
+	
+	<!-- Link to Jquery -->
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  crossorigin="anonymous"></script>
+
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <p class="navbar-text"> Reddit Scraper </p>
+        <button type="button" class="btn btn-default navbar-btn" id="home">Home</button>
+        <button type="button" class="btn btn-default navbar-btn" id="savedarticles">Saved Articles</button>
+        <button type="button" class="btn btn-default navbar-btn" id="delete">Delete articles</button>
+        <button type="button" class="btn btn-default navbar-btn" id="scrape">Scrape new articles!</button>
+    </div>
+  </div>
+</nav>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"> Articles</h3>
+  </div>
+  <div class="panel-body" id="articleContainer">
+    There are no saved articles :(. Click the 'Scrape new articles' button above!
+
+  </div>
+</div>
+
+
+<!-- Scrape Notifier Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Scrape Successful!</h4>
+        </div>
+        <div class="modal-body">
+          <p id="numberScraped">Scraped X articles!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!--Modal End -->
+
+
+<!-- Notes Modal -->
+  <div class="modal fade" id="notesModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Notes!</h4>
+        </div>
+        <div class="modal-body">
+          <p>article id: </p>
+          <p id="notesid">Notes notes notes.</p>
+          <p id="savedNote"></p>
+        </div>
+
+	    <div id="userinput">
+	      <textarea id="notetext"></textarea>
+	      <div id="buttons">
+	        <div id="actionbutton">
+	          <button id="makenote">Submit</button>
+	        </div>
+	      </div>
+	    </div>
+
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!--Modal End -->
+
+
+	<!-- Link to app.js -->
+	<script src="./app.js"></script>
+
+</body>
+</html>
